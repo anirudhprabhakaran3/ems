@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+Employee Form
+{% endblock %}
+
+{% block content %}
+
+<h1 class="mt-4 mb-4"> Modify Employees </h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success mt-4">Save Employee</button>
+  </form>
+{% endblock %}

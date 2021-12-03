@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ employee.first_name }} {{ employee.last_name }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-4 mb-4">{{ employee.first_name }} {{ employee.last_name }}</h1>
+
+<table class="table table-striped table-responsive">
+    <tr>
+        <td>First Name</td>
+        <td>{{ employee.first_name }}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{ employee.last_name }}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{ employee.email }}</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>{{ employee.phone }}</td>
+    </tr>
+    <tr>
+        <td>Title</td>
+        <td>{{ employee.job_title }}</td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>{{ employee.salary }}</td>
+    </tr>
+    <tr>
+        <td>Department</td>
+        <td>{{ employee.department.name }}</td>
+    </tr>
+</table>
+
+{% endblock %}
